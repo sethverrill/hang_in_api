@@ -7,6 +7,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-
+# VERB 'name_space/name_space/endpoint', to: 'dir/dir/controller#method' #Route 
   get '/api/v1/posters', to: 'api/v1/posters#index'
 end
