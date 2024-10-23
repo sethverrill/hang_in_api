@@ -16,7 +16,7 @@ RSpec.describe "Fetch all posters" do
         vintage: true,
         img_url: "./assets/procrastination.jpg",
        )
-        psoter3 = Poster.create(name: "DESPAIR",
+        poster3 = Poster.create(name: "DESPAIR",
         description: "Let someone else do it; you’ll just mess it up.",
         price: 73.00,
         year: 2015,
@@ -24,7 +24,8 @@ RSpec.describe "Fetch all posters" do
         img_url: "./assets/despair.jpg",
       )
     end
-    it 'can fetch all posters' do
+    it 'can create a poster' do
+
        get '/api/v1/posters' #First we get our route, what are we expecting next?
        expect(response).to be_successful 
        expect(response.status).to eq(200)
@@ -33,7 +34,7 @@ RSpec.describe "Fetch all posters" do
        #now we have to check if our data attributes are correct
        expect(posters).to be_an(Array)
        
-       poster = posters[0]
+       poster = @posters[0]
 
        expect(poster[:id]).to be_an(Integer)
        expect(poster[:type]).to eq('poster')
