@@ -11,6 +11,7 @@ class Api::V1::PostersController < ApplicationController
     end
 
     def show
-        render json: Poster.find(params[:id])
+        poster = Poster.find(params[:id])
+        render json: PosterShowSerializer.format_single_poster(poster)
     end
 end
