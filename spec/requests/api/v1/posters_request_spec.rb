@@ -54,16 +54,18 @@ RSpec.describe "Fetch all posters" do
       expect(response).to be_successful
       expect(response.status).to eq(200)
       
-      puts response.body
-      poster = JSON.parse(response.body,symbolize_names:true)
+      poster = JSON.parse(response.body,symbolize_names:true)[:data]
       
       expect(poster[:id].to_i).to eq(@poster1.id)
-      expect(poster[:name]).to eq(@poster1.name)
-      expect(poster[:description]).to eq(@poster1.description)
-      expect(poster[:price]).to eq(@poster1.price)
-      expect(poster[:year]).to eq(@poster1.year)
-      expect(poster[:vintage]).to eq(@poster1.vintage)
-      expect(poster[:img_url]).to eq(@poster1.img_url)
-    end
-  
+      expect(poster[:type]).to eq('poster')
+
+      attrs = poster[:attributes]
+
+      expect(attrs[:name]).to eq(@poster1.name)
+      expect(attrs[:description]).to eq(@poster1.description)
+      expect(attrs[:price]).to eq(@poster1.price)
+      expect(attrs[:year]).to eq(@poster1.year)
+      expect(attrs[:vintage]).to eq(@poster1.vintage)
+      expect(attrs[:img_url]).to eq(@poster1.img_url)
+    end  
 end 
