@@ -24,30 +24,31 @@ RSpec.describe "Fetch all posters" do
       img_url: "./assets/despair.jpg",
       )    
     end
-    it 'can create a poster' do
 
-       get '/api/v1/posters' #First we get our route, what are we expecting next?
-       expect(response).to be_successful 
-       expect(response.status).to eq(200)
+    it 'can fetch all posters' do
+
+        get '/api/v1/posters' #First we get our route, what are we expecting next?
+        expect(response).to be_successful 
+        expect(response.status).to eq(200)
+         
+        posters = JSON.parse(response.body,symbolize_names:true)[:data]
+        #now we have to check if our data attributes are correct
+        expect(posters).to be_an(Array)
         
-       posters = JSON.parse(response.body,symbolize_names:true)[:data]
-       #now we have to check if our data attributes are correct
-       expect(posters).to be_an(Array)
-       
-       poster = @posters[0]
-
-       expect(poster[:id]).to be_an(Integer)
-       expect(poster[:type]).to eq('poster')
-
-       attrs  = poster[:attributes]
-       
-       expect(attrs[:name]).to be_an(String)
-       expect(attrs[:description]).to be_an(String)
-       expect(attrs[:price]).to be_an(Float)
-       expect(attrs[:year]).to be_an(Integer)
-       expect(attrs[:vintage]).to be(true).or be(false)
-       expect(attrs[:img_url]).to be_an(String)
-    end
+        poster = @posters[0]
+ 
+        expect(poster[:id]).to be_an(Integer)
+        expect(poster[:type]).to eq('poster')
+ 
+        attrs  = poster[:attributes]
+        
+        expect(attrs[:name]).to be_an(String)
+        expect(attrs[:description]).to be_an(String)
+        expect(attrs[:price]).to be_an(Float)
+        expect(attrs[:year]).to be_an(Integer)
+        expect(attrs[:vintage]).to be(true).or be(false)
+        expect(attrs[:img_url]).to be_an(String)
+     end    
     
     it 'can fetch individual posters' do
       get "/api/v1/posters/#{@poster1.id}"
@@ -69,4 +70,31 @@ RSpec.describe "Fetch all posters" do
       expect(attrs[:vintage]).to eq(@poster1.vintage)
       expect(attrs[:img_url]).to eq(@poster1.img_url)
     end  
+
+    it 'can create a posters' do
+
+        get '/api/v1/posters' #First we get our route, what are we expecting next?
+        expect(response).to be_successful 
+        expect(response.status).to eq(200)
+         
+        posters = JSON.parse(response.body,symbolize_names:true)[:data]
+        #now we have to check if our data attributes are correct
+        expect(posters).to be_an(Array)
+        
+        poster = @posters[0]
+ 
+        expect(poster[:id]).to be_an(Integer)
+        expect(poster[:type]).to eq('poster')
+ 
+        attrs  = poster[:attributes]
+        
+        expect(attrs[:name]).to be_an(String)
+        expect(attrs[:description]).to be_an(String)
+        expect(attrs[:price]).to be_an(Float)
+        expect(attrs[:year]).to be_an(Integer)
+        expect(attrs[:vintage]).to be(true).or be(false)
+        expect(attrs[:img_url]).to be_an(String)
+     end    
+    
+    
 end 
