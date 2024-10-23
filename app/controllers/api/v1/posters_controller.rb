@@ -9,4 +9,8 @@ class Api::V1::PostersController < ApplicationController
         render json: PosterSerializer.format_posters(posters)
         #render json: Poster.all
     end
+
+    def show
+        render json: Poster.find(params[:id])
+    end
 end
