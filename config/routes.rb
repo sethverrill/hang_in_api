@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   # root "posts#index"
 # VERB 'name_space/name_space/endpoint', to: 'dir/dir/controller#method' #Route 
   get '/api/v1/posters', to: 'api/v1/posters#index'
+  get '/api/v1/posters/:id', to: 'api/v1/posters#show'
 end
