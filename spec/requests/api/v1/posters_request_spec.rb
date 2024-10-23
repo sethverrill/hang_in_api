@@ -67,5 +67,16 @@ RSpec.describe "Fetch all posters" do
       expect(attrs[:year]).to eq(@poster1.year)
       expect(attrs[:vintage]).to eq(@poster1.vintage)
       expect(attrs[:img_url]).to eq(@poster1.img_url)
-    end  
+    end
+
+    it 'can fetch all posters and provide a meta count' do
+      get '/api/v1/posters'
+
+      expect(response).to be_successful
+      expect(response.status).to eq(200)
+
+      meta = JSON.parse(response.body, symbolize_names: true)[:meta]
+      poster_count = Poster.count
+      expect(meta[:count]).to eq(poster_count)
+    end
 end 
