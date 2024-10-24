@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 # VERB 'name_space/name_space/endpoint', to: 'dir/dir/controller#method' #Route 
-  get '/api/v1/posters', to: 'api/v1/posters#index'
-  get '/api/v1/posters/:id', to: 'api/v1/posters#show'
+  get    '/api/v1/posters',        to: 'api/v1/posters#index'
+  get    '/api/v1/posters/:id',    to: 'api/v1/posters#show'
+  post   '/api/v1/posters',        to: 'api/v1/posters#create'
+  delete '/api/v1/posters/:id',    to: 'api/v1/posters#destroy'
   post '/api/v1/posters', to: 'api/vi/posters#update'
 end
