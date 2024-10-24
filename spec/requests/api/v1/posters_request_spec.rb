@@ -151,5 +151,6 @@ RSpec.describe "Fetch all posters" do
         expect(response.status).to eq(204)
 
         expect(posters.count).to eq(2)
+        
      end
 end     
