@@ -27,26 +27,26 @@ RSpec.describe "Fetch all posters" do
 
     it 'can fetch all posters' do
 
-        get '/api/v1/posters' #First we get our route, what are we expecting next?
-        expect(response).to be_successful 
-        expect(response.status).to eq(200)
-        posters = JSON.parse(response.body,symbolize_names:true)[:data]
-        #*now we have to check if our data attributes are correct
-        expect(posters).to be_an(Array)
-        
-        poster = posters[0]
- 
-        expect(poster[:id]).to be_an(Integer)
-        expect(poster[:type]).to eq('poster')
- 
-        attrs  = poster[:attributes]
-        
-        expect(attrs[:name]).to be_an(String)
-        expect(attrs[:description]).to be_an(String)
-        expect(attrs[:price]).to be_an(Float)
-        expect(attrs[:year]).to be_an(Integer)
-        expect(attrs[:vintage]).to be(true).or be(false)
-        expect(attrs[:img_url]).to be_an(String)
+      get '/api/v1/posters' #First we get our route, what are we expecting next?
+      expect(response).to be_successful 
+      expect(response.status).to eq(200)
+      posters = JSON.parse(response.body,symbolize_names:true)[:data]
+      #*now we have to check if our data attributes are correct
+      expect(posters).to be_an(Array)
+
+      poster = posters[0]
+
+      expect(poster[:id]).to be_an(Integer)
+      expect(poster[:type]).to eq('poster')
+
+      attrs  = poster[:attributes]
+
+      expect(attrs[:name]).to be_an(String)
+      expect(attrs[:description]).to be_an(String)
+      expect(attrs[:price]).to be_an(Float)
+      expect(attrs[:year]).to be_an(Integer)
+      expect(attrs[:vintage]).to be(true).or be(false)
+      expect(attrs[:img_url]).to be_an(String)
      end    
     
     it 'can fetch individual posters' do
@@ -68,8 +68,19 @@ RSpec.describe "Fetch all posters" do
       expect(attrs[:year]).to eq(@poster1.year)
       expect(attrs[:vintage]).to eq(@poster1.vintage)
       expect(attrs[:img_url]).to eq(@poster1.img_url)
-    end  
+     end
+  
+    it 'can fetch all posters and provide a meta count' do
+      get '/api/v1/posters'
 
+      expect(response).to be_successful
+      expect(response.status).to eq(200)
+
+      meta = JSON.parse(response.body, symbolize_names: true)[:meta]
+      poster_count = Poster.count
+      expect(meta[:count]).to eq(poster_count)
+    end
+  
     it 'can create a posters' do
 
         poster_info = {
@@ -113,9 +124,4 @@ RSpec.describe "Fetch all posters" do
 
         expect(posters.count).to eq(2)
      end
-     
-     
-     
-     
-     
-end 
+end     

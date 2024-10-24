@@ -14,7 +14,10 @@ class PosterSerializer
                         img_url: poster.img_url
                     }
                 }
-            end
+            end,
+            meta: {
+                count: posters.count
+            }
         }
     end
 
