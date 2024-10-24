@@ -68,4 +68,7 @@ RSpec.describe "Fetch all posters" do
       expect(attrs[:vintage]).to eq(@poster1.vintage)
       expect(attrs[:img_url]).to eq(@poster1.img_url)
     end  
+
+    it 'can update poster data' do
+      
 end 
