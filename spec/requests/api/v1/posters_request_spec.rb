@@ -30,12 +30,11 @@ RSpec.describe "Fetch all posters" do
         get '/api/v1/posters' #First we get our route, what are we expecting next?
         expect(response).to be_successful 
         expect(response.status).to eq(200)
-         
         posters = JSON.parse(response.body,symbolize_names:true)[:data]
-        #now we have to check if our data attributes are correct
+        #*now we have to check if our data attributes are correct
         expect(posters).to be_an(Array)
         
-        poster = @posters[0]
+        poster = posters[0]
  
         expect(poster[:id]).to be_an(Integer)
         expect(poster[:type]).to eq('poster')
@@ -73,15 +72,21 @@ RSpec.describe "Fetch all posters" do
 
     it 'can create a posters' do
 
-        get '/api/v1/posters' #First we get our route, what are we expecting next?
+        poster_info = {
+            "name": "DEFEAT",
+            "description": "It's too late to start now.",
+            "price": 35.00,
+            "year": 2023,
+            "vintage": false,
+            "img_url":  "https://unsplash.com/photos/brown-brick-building-with-red-car-parked-on-the-side-mMV6Y0ExyIk"
+        }
+
+        post '/api/v1/posters', params: poster_info #First we get our route, what are we expecting next?
         expect(response).to be_successful 
         expect(response.status).to eq(200)
          
-        posters = JSON.parse(response.body,symbolize_names:true)[:data]
-        #now we have to check if our data attributes are correct
-        expect(posters).to be_an(Array)
-        
-        poster = @posters[0]
+        poster = JSON.parse(response.body,symbolize_names:true)[:data]
+        #now we have to check if our data attributes are correct        
  
         expect(poster[:id]).to be_an(Integer)
         expect(poster[:type]).to eq('poster')
@@ -96,5 +101,21 @@ RSpec.describe "Fetch all posters" do
         expect(attrs[:img_url]).to be_an(String)
      end    
     
-    
+     it ' can destroy an image' do
+
+        posters = Poster.all
+        expect(posters.count).to eq(3)
+        
+        delete "/api/v1/posters/#{@poster2.id}"
+
+        expect(response).to be_successful 
+        expect(response.status).to eq(204)
+
+        expect(posters.count).to eq(2)
+     end
+     
+     
+     
+     
+     
 end 
