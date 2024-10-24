@@ -69,6 +69,34 @@ RSpec.describe "Fetch all posters" do
       expect(attrs[:vintage]).to eq(@poster1.vintage)
       expect(attrs[:img_url]).to eq(@poster1.img_url)
      end
+
+    it 'can update poster data' do 
+      #binding.pry
+      get "/api/v1/posters/#{@poster1.id}"
+      expect(response).to be_successful
+      expect(response.status).to eq(200)
+     
+      
+      patch "/api/v1/posters/#{@poster1.id}", params: {
+         poster:{
+           name: 'book',
+           description: 'what should i name my dog' 
+          }
+        }    
+      expect(response).to be_successful
+      expect(response.status).to eq(200)
+
+      get "/api/v1/posters/#{@poster1.id}"
+      updated_poster = JSON.parse(response.body,symbolize_names:true)[:data]
+          
+        expect(response).to be_successful
+               
+        expect(updated_poster).to have_key(:attributes)
+        attrs = updated_poster[:attributes]
+        expect(attrs).to have_key(:name)
+        expect(attrs[:name]).to eq("book")
+        
+    end
   
     it 'can fetch all posters and provide a meta count' do
       get '/api/v1/posters'
@@ -123,5 +151,6 @@ RSpec.describe "Fetch all posters" do
         expect(response.status).to eq(204)
 
         expect(posters.count).to eq(2)
+        
      end
 end     
