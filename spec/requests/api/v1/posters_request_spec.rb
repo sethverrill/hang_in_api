@@ -89,8 +89,7 @@ RSpec.describe "Fetch all posters" do
       get "/api/v1/posters/#{@poster1.id}"
       updated_poster = JSON.parse(response.body,symbolize_names:true)[:data]
           
-        expect(response).to be_successful
-               
+        expect(response).to be_successful               
         expect(updated_poster).to have_key(:attributes)
         attrs = updated_poster[:attributes]
         expect(attrs).to have_key(:name)
@@ -120,7 +119,7 @@ RSpec.describe "Fetch all posters" do
             "img_url":  "https://unsplash.com/photos/brown-brick-building-with-red-car-parked-on-the-side-mMV6Y0ExyIk"
         }
 
-        post '/api/v1/posters', params: poster_info #First we get our route, what are we expecting next?
+        post '/api/v1/posters', params: { poster: poster_info  }#First we get our route, what are we expecting next?
         expect(response).to be_successful 
         expect(response.status).to eq(200)
          
