@@ -8,4 +8,12 @@ class Poster < ApplicationRecord
     def self.i_like(choice)
         where("name ILIKE ?", "%#{choice}%")
     end
+    
+    def self.min_price(price)
+        where("price >= ?", price)
+    end    
+
+    def self.max_price(price)
+        where("price <= ?", price)
+    end
 end
