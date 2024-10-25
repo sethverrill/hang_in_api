@@ -13,6 +13,15 @@ class Api::V1::PostersController < ApplicationController
     def show
         poster = Poster.find(params[:id])
         render json: PosterSerializer.format_single_poster(poster)
+    rescue ActiveRecord::RecordNotFound => exception
+        render json: {
+            errors: [
+                {
+                    status: "404",
+                    message: "Record not found"
+                }
+            ]
+        }, status: :not_found
     end
 
     def create
