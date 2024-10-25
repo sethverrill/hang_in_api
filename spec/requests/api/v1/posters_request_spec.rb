@@ -81,47 +81,77 @@ RSpec.describe "Fetch all posters" do
       expect(meta[:count]).to eq(poster_count)
     end
   
-    it 'can create a posters' do
+  it 'can create a posters' do
+    poster_info = {
+        "name": "DEFEAT",
+        "description": "It's too late to start now.",
+        "price": 35.00,
+        "year": 2023,
+        "vintage": false,
+        "img_url":  "https://unsplash.com/photos/brown-brick-building-with-red-car-parked-on-the-side-mMV6Y0ExyIk"
+    }
 
-        poster_info = {
-            "name": "DEFEAT",
-            "description": "It's too late to start now.",
-            "price": 35.00,
-            "year": 2023,
-            "vintage": false,
-            "img_url":  "https://unsplash.com/photos/brown-brick-building-with-red-car-parked-on-the-side-mMV6Y0ExyIk"
-        }
+    post '/api/v1/posters', params: poster_info #First we get our route, what are we expecting next?
+    expect(response).to be_successful 
+    expect(response.status).to eq(200)
+      
+    poster = JSON.parse(response.body,symbolize_names:true)[:data]
+    #now we have to check if our data attributes are correct        
 
-        post '/api/v1/posters', params: poster_info #First we get our route, what are we expecting next?
-        expect(response).to be_successful 
-        expect(response.status).to eq(200)
-         
-        poster = JSON.parse(response.body,symbolize_names:true)[:data]
-        #now we have to check if our data attributes are correct        
- 
-        expect(poster[:id]).to be_an(Integer)
-        expect(poster[:type]).to eq('poster')
- 
-        attrs  = poster[:attributes]
-        
-        expect(attrs[:name]).to be_an(String)
-        expect(attrs[:description]).to be_an(String)
-        expect(attrs[:price]).to be_an(Float)
-        expect(attrs[:year]).to be_an(Integer)
-        expect(attrs[:vintage]).to be(true).or be(false)
-        expect(attrs[:img_url]).to be_an(String)
-     end    
+    expect(poster[:id]).to be_an(Integer)
+    expect(poster[:type]).to eq('poster')
+
+    attrs  = poster[:attributes]
     
-     it ' can destroy an image' do
+    expect(attrs[:name]).to be_an(String)
+    expect(attrs[:description]).to be_an(String)
+    expect(attrs[:price]).to be_an(Float)
+    expect(attrs[:year]).to be_an(Integer)
+    expect(attrs[:vintage]).to be(true).or be(false)
+    expect(attrs[:img_url]).to be_an(String)
+  end    
+  
+  it ' can destroy an image' do
+    posters = Poster.all
+    expect(posters.count).to eq(3)
+    
+    delete "/api/v1/posters/#{@poster2.id}"
 
-        posters = Poster.all
-        expect(posters.count).to eq(3)
-        
-        delete "/api/v1/posters/#{@poster2.id}"
+    expect(response).to be_successful 
+    expect(response.status).to eq(204)
 
-        expect(response).to be_successful 
-        expect(response.status).to eq(204)
+    expect(posters.count).to eq(2)
+  end
 
-        expect(posters.count).to eq(2)
-     end
+  it 'can sort posters by created_at_date asc' do
+  # !Looking to sort based on created_at_date asc & desc
+    get '/api/v1/posters', params: {sort: 'asc'}
+    
+    expect(response).to be_successful 
+    expect(response.status).to eq(200)
+          
+    posters = JSON.parse(response.body,symbolize_names:true)[:data]
+    expect(posters).to be_an(Array)
+
+    poster = posters[0]
+    expect(poster[:id]).to be_an(Integer)
+    expect(poster[:type]).to eq('poster')
+    expect(poster[:id]).to eq(@poster1.id)
+  end
+    
+  it 'can sort posters by created_at_date desc' do
+    # !Looking to sort based on created_at_date asc & desc
+    get '/api/v1/posters', params: {sort: 'desc'}
+    
+    expect(response).to be_successful 
+    expect(response.status).to eq(200)
+          
+    posters = JSON.parse(response.body,symbolize_names:true)[:data]
+    expect(posters).to be_an(Array)
+
+    poster = posters[0]
+    expect(poster[:id]).to be_an(Integer)
+    expect(poster[:type]).to eq('poster')
+    expect(poster[:id]).to eq(@poster3.id)
+  end
 end     
