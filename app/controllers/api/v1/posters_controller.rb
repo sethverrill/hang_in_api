@@ -2,7 +2,7 @@ class Api::V1::PostersController < ApplicationController
     def index 
         if params[:sort]
             posters = Poster.sort_by_creation(params[:sort])
-        elsif params[:name] #*NEW
+        elsif params[:name]
             posters = Poster.i_like(params[:name])
         else
             posters = Poster.all

@@ -13,7 +13,7 @@
       <img src="./assets/0.13.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2024-10-25T08:22:15-07:00">2024-10-25T08:22:15-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2024-10-25T11:35:03-07:00">2024-10-25T11:35:03-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -22,14 +22,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  93.22%
+  97.73%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.93
+       <span class="green">
+         1.58
        </span>
     </span> hits/line
     )
@@ -38,15 +38,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>10</b> files in total.
+    <b>13</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>59</b> relevant lines,
-    <span class="green"><b>55</b> lines covered</span> and
-    <span class="red"><b>4</b> lines missed. </span>
+    <b>88</b> relevant lines,
+    <span class="green"><b>86</b> lines covered</span> and
+    <span class="red"><b>2</b> lines missed. </span>
     (<span class="green">
-  93.22%
+  97.73%
 </span>
 )
   </div>
@@ -70,6 +70,28 @@
       <tbody>
         
           <tr class="t-file">
+            <td class="strong t-file__name"><a href="#80025eba042f1c49c979770e3415f9ac3e4e81d2" class="src_link" title="app/controllers/api/v1/posters_controller.rb">app/controllers/api/v1/posters_controller.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">38</td>
+            <td class="cell--number">21</td>
+            <td class="cell--number">21</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.90</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#a79e415d887dbd3f7c71341bb8f6b08fff164152" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
+            
+          </tr>
+        
+          <tr class="t-file">
             <td class="strong t-file__name"><a href="#b0ea7bbc90ccc2a821a1ae43aa3357f1bc9ce74c" class="src_link" title="app/models/application_record.rb">app/models/application_record.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">3</td>
@@ -82,12 +104,23 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#01bb14172cdc9ef70de7b4d8ed4fbd7faaf228c1" class="src_link" title="app/models/poster.rb">app/models/poster.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">60.00 %</td>
-            <td class="cell--number">11</td>
-            <td class="cell--number">5</td>
-            <td class="cell--number">3</td>
+            <td class="red strong cell--number t-file__coverage">77.78 %</td>
+            <td class="cell--number">19</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">7</td>
             <td class="cell--number">2</td>
-            <td class="cell--number">0.60</td>
+            <td class="cell--number">0.89</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#d2885dcf3dc753fa4005d6da0716831540ee8140" class="src_link" title="app/serializers/poster_serializer.rb">app/serializers/poster_serializer.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">40</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">6.50</td>
             
           </tr>
         
@@ -125,13 +158,13 @@
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#9857963121783ee5caae1229b02cd28ad797d63e" class="src_link" title="config/environments/development.rb">config/environments/development.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">90.48 %</td>
-            <td class="cell--number">71</td>
-            <td class="cell--number">21</td>
-            <td class="cell--number">19</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">0.90</td>
+            <td class="strong t-file__name"><a href="#273da7f9318ca8371184d49aaf7b883883c99a30" class="src_link" title="config/environments/test.rb">config/environments/test.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">64</td>
+            <td class="cell--number">18</td>
+            <td class="cell--number">18</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
             
           </tr>
         
@@ -195,6 +228,532 @@
       </div>
 
       <div class="source_files">
+      
+        <div class="source_table" id="80025eba042f1c49c979770e3415f9ac3e4e81d2">
+  <div class="header">
+    <h3>app/controllers/api/v1/posters_controller.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>21</b> relevant lines.
+      <span class="green"><b>21</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class Api::V1::PostersController &lt; ApplicationController</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def index </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="3">
+            
+              <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">        if params[:sort]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="4">
+            
+              <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">            posters = Poster.sort_by_creation(params[:sort])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="4" data-linenumber="5">
+            
+              <span class="hits">4</span>
+            
+
+            
+
+            <code class="ruby">        elsif params[:name]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">            posters = Poster.i_like(params[:name])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+
+            
+
+            <code class="ruby">        else</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="8">
+            
+              <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">            posters = Poster.all</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+
+            
+
+            <code class="ruby">        end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="11">
+            
+              <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">        render json: PosterSerializer.format_posters(posters)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="13">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def show</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="15">
+            
+              <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">        poster = Poster.find(params[:id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="16">
+            
+              <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">        render json: PosterSerializer.format_single_poster(poster)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="19">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def update</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="20">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        render json: Poster.update(params[:id], poster_params)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="22">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="23">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def create</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="24">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        poster = Poster.create!(poster_params)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="25">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        render json: PosterSerializer.format_single_poster(poster)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="26">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="28">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="29">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def destroy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="30">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        Poster.find(params[:id]).destroy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="31">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="32">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="33">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="34">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    private</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="35">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def poster_params</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="36">
+            
+              <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">        params.require(:poster).permit(:name, :description, :price, :year, :vintage, :img_url)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="37">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="38">
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="a79e415d887dbd3f7c71341bb8f6b08fff164152">
+  <div class="header">
+    <h3>app/controllers/application_controller.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>1</b> relevant lines.
+      <span class="green"><b>1</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class ApplicationController &lt; ActionController::API</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="3">
+            
+
+            
+
+            <code class="ruby">    </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="4">
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
       
         <div class="source_table" id="b0ea7bbc90ccc2a821a1ae43aa3357f1bc9ce74c">
   <div class="header">
@@ -266,7 +825,7 @@
     <h3>app/models/poster.rb</h3>
     <h4>
       <span class="red">
-  60.0%
+  77.78%
 </span>
 
       lines covered
@@ -275,8 +834,8 @@
     
 
     <div class="t-line-summary">
-      <b>5</b> relevant lines.
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>9</b> relevant lines.
+      <span class="green"><b>7</b> lines covered</span> and
       <span class="red"><b>2</b> lines missed.</span>
     </div>
 
@@ -305,7 +864,7 @@
 
             
 
-            <code class="ruby"># !validations/relationships/data_manipulation happen here</code>
+            <code class="ruby">    # !validations/relationships/data_manipulation happen here</code>
           </li>
         </div>
       
@@ -332,7 +891,9 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="5">
+          <li class="covered" data-hits="2" data-linenumber="5">
+            
+              <span class="hits">2</span>
             
 
             
@@ -374,7 +935,9 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="9">
+          <li class="covered" data-hits="1" data-linenumber="9">
+            
+              <span class="hits">1</span>
             
 
             
@@ -395,6 +958,533 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="11">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def self.min_price(price)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="13">
+            
+
+            
+
+            <code class="ruby">        where(&quot;price &gt;= ?&quot;, price)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+
+            
+
+            <code class="ruby">    end    </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="16">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def self.max_price(price)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="17">
+            
+
+            
+
+            <code class="ruby">        where(&quot;price &lt;= ?&quot;, price)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="d2885dcf3dc753fa4005d6da0716831540ee8140">
+  <div class="header">
+    <h3>app/serializers/poster_serializer.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>6</b> relevant lines.
+      <span class="green"><b>6</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class PosterSerializer</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def self.format_posters(posters)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="3">
+            
+
+            
+
+            <code class="ruby">        {</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="4">
+            
+              <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">            data: posters.map do |poster|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
+            
+
+            
+
+            <code class="ruby">                {</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="27" data-linenumber="6">
+            
+              <span class="hits">27</span>
+            
+
+            
+
+            <code class="ruby">                    id: poster.id,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+
+            
+
+            <code class="ruby">                    type: &#39;poster&#39;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+
+            
+
+            <code class="ruby">                    attributes: {</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+
+            
+
+            <code class="ruby">                        name: poster.name,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+
+            
+
+            <code class="ruby">                        description: poster.description,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+
+            
+
+            <code class="ruby">                        price: poster.price,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
+            
+
+            
+
+            <code class="ruby">                        year: poster.year,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="13">
+            
+
+            
+
+            <code class="ruby">                        vintage: poster.vintage,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+
+            
+
+            <code class="ruby">                        img_url: poster.img_url</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+
+            
+
+            <code class="ruby">                    }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="16">
+            
+
+            
+
+            <code class="ruby">                }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+
+            
+
+            <code class="ruby">            end,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+
+            
+
+            <code class="ruby">            meta: {</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+
+            
+
+            <code class="ruby">                count: posters.count</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="20">
+            
+
+            
+
+            <code class="ruby">            }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
+            
+
+            
+
+            <code class="ruby">        }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="22">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="23">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="24">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def self.format_single_poster(poster)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="25">
+            
+
+            
+
+            <code class="ruby">        {</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="26">
+            
+              <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">          data: {</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
+            
+
+            
+
+            <code class="ruby">            id: poster.id,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="28">
+            
+
+            
+
+            <code class="ruby">            type: &#39;poster&#39;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="29">
+            
+
+            
+
+            <code class="ruby">            attributes: {</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
+            
+
+            
+
+            <code class="ruby">              name: poster.name,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="31">
+            
+
+            
+
+            <code class="ruby">              description: poster.description,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="32">
+            
+
+            
+
+            <code class="ruby">              price: poster.price,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="33">
+            
+
+            
+
+            <code class="ruby">              year: poster.year,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="34">
+            
+
+            
+
+            <code class="ruby">              vintage: poster.vintage,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="35">
+            
+
+            
+
+            <code class="ruby">              img_url: poster.img_url</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="36">
+            
+
+            
+
+            <code class="ruby">            }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="37">
+            
+
+            
+
+            <code class="ruby">          }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="38">
+            
+
+            
+
+            <code class="ruby">        }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="39">
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="40">
             
 
             
@@ -1077,12 +2167,12 @@
 </div>
 
       
-        <div class="source_table" id="9857963121783ee5caae1229b02cd28ad797d63e">
+        <div class="source_table" id="273da7f9318ca8371184d49aaf7b883883c99a30">
   <div class="header">
-    <h3>config/environments/development.rb</h3>
+    <h3>config/environments/test.rb</h3>
     <h4>
       <span class="green">
-  90.48%
+  100.0%
 </span>
 
       lines covered
@@ -1091,9 +2181,9 @@
     
 
     <div class="t-line-summary">
-      <b>21</b> relevant lines.
-      <span class="green"><b>19</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>18</b> relevant lines.
+      <span class="green"><b>18</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -1126,7 +2216,57 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
+          <li class="never" data-hits="" data-linenumber="3">
+            
+
+            
+
+            <code class="ruby"># The test environment is used exclusively to run your application&#39;s</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="4">
+            
+
+            
+
+            <code class="ruby"># test suite. You never need to work with it otherwise. Remember that</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
+            
+
+            
+
+            <code class="ruby"># your test database is &quot;scratch space&quot; for the test suite and is wiped</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
+            
+
+            
+
+            <code class="ruby"># and recreated between test runs. Don&#39;t rely on the data there!</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
             
               <span class="hits">1</span>
             
@@ -1138,64 +2278,12 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="4">
+          <li class="never" data-hits="" data-linenumber="9">
             
 
             
 
             <code class="ruby">  # Settings specified here will take precedence over those in config/application.rb.</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="5">
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="6">
-            
-
-            
-
-            <code class="ruby">  # In the development environment your application&#39;s code is reloaded any time</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-
-            
-
-            <code class="ruby">  # it changes. This slows down response time but is perfect for development</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="8">
-            
-
-            
-
-            <code class="ruby">  # since you don&#39;t have to restart the web server when you make code changes.</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="9">
-            
-              <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  config.enable_reloading = true</code>
           </li>
         </div>
       
@@ -1215,7 +2303,7 @@
 
             
 
-            <code class="ruby">  # Do not eager load code on boot.</code>
+            <code class="ruby">  # While tests run files are not watched, reloading is not necessary.</code>
           </li>
         </div>
       
@@ -1227,7 +2315,7 @@
 
             
 
-            <code class="ruby">  config.eager_load = false</code>
+            <code class="ruby">  config.enable_reloading = false</code>
           </li>
         </div>
       
@@ -1247,19 +2335,17 @@
 
             
 
-            <code class="ruby">  # Show full error reports.</code>
+            <code class="ruby">  # Eager loading loads your entire application. When running a single test locally,</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
-            
-              <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="15">
             
 
             
 
-            <code class="ruby">  config.consider_all_requests_local = true</code>
+            <code class="ruby">  # this is usually not necessary, and can slow down your test suite. However, it&#39;s</code>
           </li>
         </div>
       
@@ -1269,7 +2355,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # recommended that you enable it in continuous integration systems to ensure eager</code>
           </li>
         </div>
       
@@ -1279,7 +2365,7 @@
 
             
 
-            <code class="ruby">  # Enable server timing</code>
+            <code class="ruby">  # loading is working properly before deploying your code.</code>
           </li>
         </div>
       
@@ -1291,7 +2377,7 @@
 
             
 
-            <code class="ruby">  config.server_timing = true</code>
+            <code class="ruby">  config.eager_load = ENV[&quot;CI&quot;].present?</code>
           </li>
         </div>
       
@@ -1311,17 +2397,19 @@
 
             
 
-            <code class="ruby">  # Enable/disable caching. By default caching is disabled.</code>
+            <code class="ruby">  # Configure public file server for tests with Cache-Control for performance.</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="21">
+          <li class="covered" data-hits="1" data-linenumber="21">
+            
+              <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  # Run rails dev:cache to toggle caching.</code>
+            <code class="ruby">  config.public_file_server.enabled = true</code>
           </li>
         </div>
       
@@ -1333,27 +2421,27 @@
 
             
 
-            <code class="ruby">  if Rails.root.join(&quot;tmp/caching-dev.txt&quot;).exist?</code>
+            <code class="ruby">  config.public_file_server.headers = {</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="23">
+          <li class="never" data-hits="" data-linenumber="23">
             
 
             
 
-            <code class="ruby">    config.cache_store = :memory_store</code>
+            <code class="ruby">    &quot;Cache-Control&quot; =&gt; &quot;public, max-age=#{1.hour.to_i}&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="24">
+          <li class="never" data-hits="" data-linenumber="24">
             
 
             
 
-            <code class="ruby">    config.public_file_server.headers = {</code>
+            <code class="ruby">  }</code>
           </li>
         </div>
       
@@ -1363,7 +2451,7 @@
 
             
 
-            <code class="ruby">      &quot;Cache-Control&quot; =&gt; &quot;public, max-age=#{2.days.to_i}&quot;</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1373,17 +2461,19 @@
 
             
 
-            <code class="ruby">    }</code>
+            <code class="ruby">  # Show full error reports and disable caching.</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="27">
+          <li class="covered" data-hits="1" data-linenumber="27">
+            
+              <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  else</code>
+            <code class="ruby">  config.consider_all_requests_local = true</code>
           </li>
         </div>
       
@@ -1395,29 +2485,29 @@
 
             
 
-            <code class="ruby">    config.action_controller.perform_caching = false</code>
+            <code class="ruby">  config.action_controller.perform_caching = false</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="29">
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="30">
+          <li class="covered" data-hits="1" data-linenumber="29">
             
               <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    config.cache_store = :null_store</code>
+            <code class="ruby">  config.cache_store = :null_store</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
+            
+
+            
+
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1427,17 +2517,19 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">  # Render exception templates for rescuable exceptions and raise for other exceptions.</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="32">
+          <li class="covered" data-hits="1" data-linenumber="32">
+            
+              <span class="hits">1</span>
             
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  config.action_dispatch.show_exceptions = :rescuable</code>
           </li>
         </div>
       
@@ -1447,29 +2539,29 @@
 
             
 
-            <code class="ruby">  # Store uploaded files on the local file system (see config/storage.yml for options).</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="34">
+          <li class="never" data-hits="" data-linenumber="34">
+            
+
+            
+
+            <code class="ruby">  # Disable request forgery protection in test environment.</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="35">
             
               <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  config.active_storage.service = :local</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="35">
-            
-
-            
-
-            <code class="ruby"></code>
+            <code class="ruby">  config.action_controller.allow_forgery_protection = false</code>
           </li>
         </div>
       
@@ -1479,24 +2571,34 @@
 
             
 
-            <code class="ruby">  # Don&#39;t care if the mailer can&#39;t send.</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="37">
+          <li class="never" data-hits="" data-linenumber="37">
+            
+
+            
+
+            <code class="ruby">  # Store uploaded files on the local file system in a temporary directory.</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="38">
             
               <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  config.action_mailer.raise_delivery_errors = false</code>
+            <code class="ruby">  config.active_storage.service = :test</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="38">
+          <li class="never" data-hits="" data-linenumber="39">
             
 
             
@@ -1506,7 +2608,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="39">
+          <li class="covered" data-hits="1" data-linenumber="40">
             
               <span class="hits">1</span>
             
@@ -1518,7 +2620,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="40">
+          <li class="never" data-hits="" data-linenumber="41">
             
 
             
@@ -1528,24 +2630,12 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="41">
+          <li class="never" data-hits="" data-linenumber="42">
             
 
             
 
-            <code class="ruby">  # Print deprecation notices to the Rails logger.</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="42">
-            
-              <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  config.active_support.deprecation = :log</code>
+            <code class="ruby">  # Tell Action Mailer not to deliver emails to the real world.</code>
           </li>
         </div>
       
@@ -1555,7 +2645,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # The :test delivery method accumulates sent emails in the</code>
           </li>
         </div>
       
@@ -1565,7 +2655,7 @@
 
             
 
-            <code class="ruby">  # Raise exceptions for disallowed deprecations.</code>
+            <code class="ruby">  # ActionMailer::Base.deliveries array.</code>
           </li>
         </div>
       
@@ -1577,7 +2667,7 @@
 
             
 
-            <code class="ruby">  config.active_support.disallowed_deprecation = :raise</code>
+            <code class="ruby">  config.action_mailer.delivery_method = :test</code>
           </li>
         </div>
       
@@ -1597,7 +2687,7 @@
 
             
 
-            <code class="ruby">  # Tell Active Support which deprecation messages to disallow.</code>
+            <code class="ruby">  # Print deprecation notices to the stderr.</code>
           </li>
         </div>
       
@@ -1609,7 +2699,7 @@
 
             
 
-            <code class="ruby">  config.active_support.disallowed_deprecation_warnings = []</code>
+            <code class="ruby">  config.active_support.deprecation = :stderr</code>
           </li>
         </div>
       
@@ -1629,7 +2719,7 @@
 
             
 
-            <code class="ruby">  # Raise an error on page load if there are pending migrations.</code>
+            <code class="ruby">  # Raise exceptions for disallowed deprecations.</code>
           </li>
         </div>
       
@@ -1641,7 +2731,7 @@
 
             
 
-            <code class="ruby">  config.active_record.migration_error = :page_load</code>
+            <code class="ruby">  config.active_support.disallowed_deprecation = :raise</code>
           </li>
         </div>
       
@@ -1661,7 +2751,7 @@
 
             
 
-            <code class="ruby">  # Highlight code that triggered database queries in logs.</code>
+            <code class="ruby">  # Tell Active Support which deprecation messages to disallow.</code>
           </li>
         </div>
       
@@ -1673,7 +2763,7 @@
 
             
 
-            <code class="ruby">  config.active_record.verbose_query_logs = true</code>
+            <code class="ruby">  config.active_support.disallowed_deprecation_warnings = []</code>
           </li>
         </div>
       
@@ -1693,19 +2783,17 @@
 
             
 
-            <code class="ruby">  # Highlight code that enqueued background job in logs.</code>
+            <code class="ruby">  # Raises error for missing translations.</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="57">
-            
-              <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="57">
             
 
             
 
-            <code class="ruby">  config.active_job.verbose_enqueue_logs = true</code>
+            <code class="ruby">  # config.i18n.raise_on_missing_translations = true</code>
           </li>
         </div>
       
@@ -1725,7 +2813,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # Annotate rendered view with file names.</code>
           </li>
         </div>
       
@@ -1735,7 +2823,7 @@
 
             
 
-            <code class="ruby">  # Raises error for missing translations.</code>
+            <code class="ruby">  # config.action_view.annotate_rendered_view_with_filenames = true</code>
           </li>
         </div>
       
@@ -1745,7 +2833,7 @@
 
             
 
-            <code class="ruby">  # config.i18n.raise_on_missing_translations = true</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1755,82 +2843,12 @@
 
             
 
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="63">
-            
-
-            
-
-            <code class="ruby">  # Annotate rendered view with file names.</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="64">
-            
-
-            
-
-            <code class="ruby">  # config.action_view.annotate_rendered_view_with_filenames = true</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="65">
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="66">
-            
-
-            
-
-            <code class="ruby">  # Uncomment if you wish to allow Action Cable access from any origin.</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="67">
-            
-
-            
-
-            <code class="ruby">  # config.action_cable.disable_request_forgery_protection = true</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="68">
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="69">
-            
-
-            
-
             <code class="ruby">  # Raise error when a before_action&#39;s only/except options reference missing actions</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="70">
+          <li class="covered" data-hits="1" data-linenumber="63">
             
               <span class="hits">1</span>
             
@@ -1842,7 +2860,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="71">
+          <li class="never" data-hits="" data-linenumber="64">
             
 
             

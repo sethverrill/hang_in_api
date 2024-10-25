@@ -151,14 +151,14 @@ RSpec.describe "Fetch all posters" do
   
   it ' can destroy an image' do
     posters = Poster.all
-    expect(posters.count).to eq(3)
+    expect(posters.count).to eq(5)
     
     delete "/api/v1/posters/#{@poster2.id}"
 
     expect(response).to be_successful 
     expect(response.status).to eq(204)
 
-    expect(posters.count).to eq(2)
+    expect(posters.count).to eq(4)
   end
 
   it 'can sort posters by created_at_date asc' do
@@ -190,7 +190,7 @@ RSpec.describe "Fetch all posters" do
     expect(poster[:id]).to be_an(Integer)
     expect(poster[:type]).to eq('poster')
     # *Here we can see the first poster in our array should be poster 3, which would be the most recent poster created
-    expect(poster[:id]).to eq(@poster3.id) 
+    expect(poster[:id]).to eq(@poster5.id) 
   end
 
   it 'can query posters by partial names' do
@@ -208,21 +208,30 @@ RSpec.describe "Fetch all posters" do
   
     expect(posters.map { |poster| poster[:id] }).to include(@poster4.id, @poster5.id)
   end
-  # it 'can query the minimum price of a poster' do
-  #   get '/api/v1/posters', params: {min_price: 2000}
+  it 'can query the minimum price of a poster' do
+    get '/api/v1/posters', params: {min_price: 2000}
 
-  #   expect(response).to be_successful 
-  #   expect(response.status).to eq(200)
+    expect(response).to be_successful 
+    expect(response.status).to eq(200)
 
-  #   posters = JSON.parse(response.body,symbolize_names:true)[:data]
-  #   expect(posters).to be_an(Array)
-    
-  #   expect(meta[:count]).to eq(0)
-  # end
+    posters = JSON.parse(response.body,symbolize_names:true)[:data]
+    expect(posters).to be_an(Array)
+require 'pry'; binding.pry
+    meta = JSON.parse(response.body, symbolize_names: true)[:meta]
+    expect(meta[:count]).to eq(0)
+  end
   
-  # it 'can query the maximum price of a poster' do
-  #   get '/api/v1/posters', params{max_price: 150}
+  it 'can query the maximum price of a poster' do
+    get '/api/v1/posters', params: {max_price: 20}
 
-    
-  # end
+    expect(response).to be_successful 
+    expect(response.status).to eq(200)
+
+    posters = JSON.parse(response.body,symbolize_names:true)[:data]
+    expect(posters).to be_an(Array)
+
+    meta = JSON.parse(response.body, symbolize_names: true)[:meta]
+    expect(meta[:count]).to eq(1)
+    expect(posters.map {|poster|poster[:id]}).to include(@poster5.id)
+  end
 end     
