@@ -91,7 +91,7 @@ RSpec.describe "Fetch all posters" do
         "img_url":  "https://unsplash.com/photos/brown-brick-building-with-red-car-parked-on-the-side-mMV6Y0ExyIk"
     }
 
-    post '/api/v1/posters', params: poster_info #First we get our route, what are we expecting next?
+    post '/api/v1/posters', params: { poster: poster_info} #First we get our route, what are we expecting next?
     expect(response).to be_successful 
     expect(response.status).to eq(200)
       
