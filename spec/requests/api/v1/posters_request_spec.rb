@@ -216,7 +216,7 @@ RSpec.describe "Fetch all posters" do
 
     posters = JSON.parse(response.body,symbolize_names:true)[:data]
     expect(posters).to be_an(Array)
-require 'pry'; binding.pry
+
     meta = JSON.parse(response.body, symbolize_names: true)[:meta]
     expect(meta[:count]).to eq(0)
   end
