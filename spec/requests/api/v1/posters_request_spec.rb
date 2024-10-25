@@ -150,7 +150,6 @@ RSpec.describe "Fetch all posters" do
   end    
   
   it ' can destroy an image' do
-    require 'pry'; binding.pry
     posters = Poster.all
     expect(posters.count).to eq(5)
     
@@ -233,8 +232,6 @@ RSpec.describe "Fetch all posters" do
 
     meta = JSON.parse(response.body, symbolize_names: true)[:meta]
     expect(meta[:count]).to eq(1)
-
-    expect(posters.map {|poster|poster[:id]}).to include(@poster4)
-    
+    expect(posters.map {|poster|poster[:id]}).to include(@poster5.id)
   end
 end     
