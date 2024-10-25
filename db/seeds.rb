@@ -28,3 +28,4 @@ Poster.create(name: "DESPAIR",
   vintage: false,
   img_url: "./assets/despair.jpg",
 )
+ 
