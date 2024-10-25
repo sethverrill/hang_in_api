@@ -1,13 +1,18 @@
 class Api::V1::PostersController < ApplicationController
     def index 
-        #*We are doing three things here: 
-        #*1. Do we have any parameters coming in? 
-        #*2. Querying for data (all or some based off params)- if any data manipulation is needed, go to the model!
-        #*3. DOING IT(process next line)  
-        posters = Poster.all
-        #*5. Determine, am I exposing (serializer) something? Or am I displaying (views) something?
+        if params[:sort]
+            posters = Poster.sort_by_creation(params[:sort])
+        elsif params[:name]
+            posters = Poster.i_like(params[:name])
+        elsif params[:min_price]
+            posters = Poster.min_price(params[:min_price])
+        elsif params[:max_price]
+            posters =Poster.max_price(params[:max_price])
+        else
+            posters = Poster.all
+        end
+
         render json: PosterSerializer.format_posters(posters)
-        #*render json: Poster.all
     end
 
     def show
@@ -24,6 +29,10 @@ class Api::V1::PostersController < ApplicationController
         }, status: :not_found
     end
 
+    def update
+        render json: Poster.update(params[:id], poster_params)
+    end
+
     def create
         poster = Poster.create!(poster_params)
         render json: PosterSerializer.format_single_poster(poster)
@@ -34,9 +43,9 @@ class Api::V1::PostersController < ApplicationController
         Poster.find(params[:id]).destroy
     end
 
-    private
 
+    private
     def poster_params
-        params.permit(:name, :description, :price, :year, :vintage, :img_url)    
-    end    
+        params.require(:poster).permit(:name, :description, :price, :year, :vintage, :img_url)
+    end
 end
