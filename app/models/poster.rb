@@ -4,4 +4,8 @@ class Poster < ApplicationRecord
         # *ActiveRecord method order that sorts the created_at attribute
         order(created_at: choice.to_sym)
     end
+
+    def self.i_like(choice)
+        where("name ILIKE ?", "%#{choice}%")
+    end
 end
