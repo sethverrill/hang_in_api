@@ -13,7 +13,8 @@
       <img src="./assets/0.13.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2024-10-24T17:27:11-06:00">2024-10-24T17:27:11-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2024-10-24T16:48:55-07:00">2024-10-24T16:48:55-07:00</abbr></div>
+
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -29,7 +30,8 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.21
+         1.31
+
        </span>
     </span> hits/line
     )
@@ -42,8 +44,9 @@
   </div>
 
   <div class="t-line-summary">
-    <b>76</b> relevant lines,
-    <span class="green"><b>76</b> lines covered</span> and
+    <b>77</b> relevant lines,
+    <span class="green"><b>77</b> lines covered</span> and
+
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -76,7 +79,8 @@
             <td class="cell--number">17</td>
             <td class="cell--number">17</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.41</td>
+            <td class="cell--number">1.47</td>
+
             
           </tr>
         
@@ -105,11 +109,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#77333c4203a1c5144aafda9ce5c64e7f3cbac698" class="src_link" title="app/models/poster.rb">app/models/poster.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">6</td>
             <td class="cell--number">3</td>
-            <td class="cell--number">1</td>
-            <td class="cell--number">1</td>
+            <td class="cell--number">3</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="cell--number">1.33</td>
             
           </tr>
         
@@ -120,8 +124,8 @@
             <td class="cell--number">6</td>
             <td class="cell--number">6</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.50</td>
-            
+            <td class="cell--number">3.50</td>
+
           </tr>
         
           <tr class="t-file">
@@ -320,46 +324,48 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="7">
+          <li class="covered" data-hits="4" data-linenumber="7">
+            
+              <span class="hits">4</span>
+            
+
+            
+
+            <code class="ruby">        if params[:sort]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="8">
             
               <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">        posters = Poster.all</code>
+            <code class="ruby">            posters = Poster.sort_by_creation(params[:sort])</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="8">
+          <li class="never" data-hits="" data-linenumber="9">
             
 
             
 
-            <code class="ruby">        #5. Determine, am I exposing (serializer) something? Or am I displaying (views) something?</code>
+            <code class="ruby">        else</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="9">
+          <li class="covered" data-hits="2" data-linenumber="10">
             
               <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">        render json: PosterSerializer.format_posters(posters)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-
-            
-
-            <code class="ruby">        #render json: Poster.all</code>
+            <code class="ruby">            posters = Poster.all</code>
           </li>
         </div>
       
@@ -369,7 +375,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">        end</code>
           </li>
         </div>
       
@@ -379,12 +385,53 @@
 
             
 
+            <code class="ruby">        #5. Determine, am I exposing (serializer) something? Or am I displaying (views) something?</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="4" data-linenumber="13">
+            
+              <span class="hits">4</span>
+
+            
+
+            <code class="ruby">        render json: PosterSerializer.format_posters(posters)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+
+            
+
+            <code class="ruby">        #render json: Poster.all</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="16">
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
+          <li class="covered" data-hits="1" data-linenumber="17">
             
               <span class="hits">1</span>
             
@@ -396,7 +443,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="14">
+          <li class="covered" data-hits="1" data-linenumber="18">
+
             
               <span class="hits">3</span>
             
@@ -408,7 +456,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="15">
+          <li class="covered" data-hits="1" data-linenumber="19">
             
               <span class="hits">3</span>
             
@@ -420,7 +468,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="20">
             
 
             
@@ -430,7 +478,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="21">
             
 
             
@@ -440,7 +488,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="18">
+          <li class="covered" data-hits="1" data-linenumber="22">
             
               <span class="hits">1</span>
             
@@ -452,7 +500,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="19">
+          <li class="covered" data-hits="1" data-linenumber="23">
             
               <span class="hits">1</span>
             
@@ -594,7 +642,9 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="32">
+          <li class="covered" data-hits="1" data-linenumber="32">
+            
+              <span class="hits">1</span>
             
 
             
@@ -604,9 +654,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="33">
-            
-              <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="33">
             
 
             
@@ -628,8 +676,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="35">
-            
+          <li class="covered" data-hits="1" data-linenumber="35">
+
               <span class="hits">2</span>
             
 
@@ -816,8 +864,8 @@
     
 
     <div class="t-line-summary">
-      <b>1</b> relevant lines.
-      <span class="green"><b>1</b> lines covered</span> and
+      <b>3</b> relevant lines.
+      <span class="green"><b>3</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -846,12 +894,46 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby"># !validations/relationships/data_manipulation happen here</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="3">
+          <li class="covered" data-hits="1" data-linenumber="3">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def self.sort_by_creation(choice)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="4">
+            
+              <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">        order(created_at: choice.to_sym)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
             
 
             
@@ -926,9 +1008,10 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="4">
+          <li class="covered" data-hits="4" data-linenumber="4">
             
-              <span class="hits">2</span>
+              <span class="hits">4</span>
+
             
 
             
@@ -948,10 +1031,10 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="6">
+          <li class="covered" data-hits="12" data-linenumber="6">
             
-              <span class="hits">6</span>
-            
+              <span class="hits">12</span>
+
 
             
 
@@ -1152,7 +1235,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="26">
+          <li class="covered" data-hits="2" data-linenumber="26">
+
             
               <span class="hits">4</span>
             
