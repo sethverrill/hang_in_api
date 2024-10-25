@@ -25,8 +25,7 @@ RSpec.describe "Fetch all posters" do
       )    
     end
 
-    it 'can fetch all posters' do
-
+  it 'can fetch all posters' do
       get '/api/v1/posters' #First we get our route, what are we expecting next?
       expect(response).to be_successful 
       expect(response.status).to eq(200)
@@ -49,7 +48,7 @@ RSpec.describe "Fetch all posters" do
       expect(attrs[:img_url]).to be_an(String)
      end    
     
-    it 'can fetch individual posters' do
+  it 'can fetch individual posters' do
       get "/api/v1/posters/#{@poster1.id}"
       
       expect(response).to be_successful
@@ -69,17 +68,40 @@ RSpec.describe "Fetch all posters" do
       expect(attrs[:vintage]).to eq(@poster1.vintage)
       expect(attrs[:img_url]).to eq(@poster1.img_url)
      end
+
+  it 'can update poster data' do 
+      patch "/api/v1/posters/#{@poster1.id}", params: {
+         poster:{
+           name: 'book',
+           description: 'what should i name my dog' 
+          }
+        }    
+      
+    expect(response).to be_successful
+    expect(response.status).to eq(200)
+
+    get "/api/v1/posters/#{@poster1.id}"
+    updated_poster = JSON.parse(response.body,symbolize_names:true)[:data]
+
+    expect(response).to be_successful               
+    expect(updated_poster).to have_key(:attributes)
+
+    attrs = updated_poster[:attributes]
+
+    expect(attrs).to have_key(:name)
+    expect(attrs[:name]).to eq("book")
+  end
   
-    it 'can fetch all posters and provide a meta count' do
-      get '/api/v1/posters'
+  it 'can fetch all posters and provide a meta count' do
+    get '/api/v1/posters'
 
-      expect(response).to be_successful
-      expect(response.status).to eq(200)
+    expect(response).to be_successful
+    expect(response.status).to eq(200)
 
-      meta = JSON.parse(response.body, symbolize_names: true)[:meta]
-      poster_count = Poster.count
-      expect(meta[:count]).to eq(poster_count)
-    end
+    meta = JSON.parse(response.body, symbolize_names: true)[:meta]
+    poster_count = Poster.count
+    expect(meta[:count]).to eq(poster_count)
+  end
   
   it 'can create a posters' do
     poster_info = {

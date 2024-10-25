@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/jonathanatkins/turing_work/hang_in_api/config/environment.rb": {
+      "/Users/sethverrill/turing_work/mod2/2408/hang_in/hang_in_there_api/config/environment.rb": {
         "lines": [
           null,
           1,
@@ -10,7 +10,7 @@
           1
         ]
       },
-      "/Users/jonathanatkins/turing_work/hang_in_api/config/application.rb": {
+      "/Users/sethverrill/turing_work/mod2/2408/hang_in/hang_in_there_api/config/application.rb": {
         "lines": [
           1,
           null,
@@ -58,7 +58,7 @@
           null
         ]
       },
-      "/Users/jonathanatkins/turing_work/hang_in_api/config/boot.rb": {
+      "/Users/sethverrill/turing_work/mod2/2408/hang_in/hang_in_there_api/config/boot.rb": {
         "lines": [
           1,
           null,
@@ -66,7 +66,7 @@
           1
         ]
       },
-      "/Users/jonathanatkins/turing_work/hang_in_api/config/environments/test.rb": {
+      "/Users/sethverrill/turing_work/mod2/2408/hang_in/hang_in_there_api/config/environments/test.rb": {
         "lines": [
           1,
           null,
@@ -134,7 +134,7 @@
           null
         ]
       },
-      "/Users/jonathanatkins/turing_work/hang_in_api/config/initializers/cors.rb": {
+      "/Users/sethverrill/turing_work/mod2/2408/hang_in/hang_in_there_api/config/initializers/cors.rb": {
         "lines": [
           null,
           null,
@@ -154,7 +154,7 @@
           null
         ]
       },
-      "/Users/jonathanatkins/turing_work/hang_in_api/config/initializers/filter_parameter_logging.rb": {
+      "/Users/sethverrill/turing_work/mod2/2408/hang_in/hang_in_there_api/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
@@ -166,7 +166,7 @@
           null
         ]
       },
-      "/Users/jonathanatkins/turing_work/hang_in_api/config/initializers/inflections.rb": {
+      "/Users/sethverrill/turing_work/mod2/2408/hang_in/hang_in_there_api/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -186,7 +186,7 @@
           null
         ]
       },
-      "/Users/jonathanatkins/turing_work/hang_in_api/config/routes.rb": {
+      "/Users/sethverrill/turing_work/mod2/2408/hang_in/hang_in_there_api/config/routes.rb": {
         "lines": [
           1,
           null,
@@ -202,10 +202,11 @@
           1,
           1,
           1,
+          1,
           null
         ]
       },
-      "/Users/jonathanatkins/turing_work/hang_in_api/app/models/poster.rb": {
+      "/Users/sethverrill/turing_work/mod2/2408/hang_in/hang_in_there_api/app/models/poster.rb": {
         "lines": [
           1,
           null,
@@ -216,14 +217,14 @@
           null
         ]
       },
-      "/Users/jonathanatkins/turing_work/hang_in_api/app/models/application_record.rb": {
+      "/Users/sethverrill/turing_work/mod2/2408/hang_in/hang_in_there_api/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/jonathanatkins/turing_work/hang_in_api/app/controllers/api/v1/posters_controller.rb": {
+      "/Users/sethverrill/turing_work/mod2/2408/hang_in/hang_in_there_api/app/controllers/api/v1/posters_controller.rb": {
         "lines": [
           1,
           1,
@@ -238,18 +239,13 @@
           null,
           null,
           4,
+
           null,
           null,
           null,
           1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
+          3,
+          3,
           null,
           null,
           1,
@@ -257,15 +253,25 @@
           null,
           null,
           1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
           null,
           1,
           null,
           1,
+          2,
           null,
           null
         ]
       },
-      "/Users/jonathanatkins/turing_work/hang_in_api/app/controllers/application_controller.rb": {
+      "/Users/sethverrill/turing_work/mod2/2408/hang_in/hang_in_there_api/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null,
@@ -273,7 +279,7 @@
           null
         ]
       },
-      "/Users/jonathanatkins/turing_work/hang_in_api/app/serializers/poster_serializer.rb": {
+      "/Users/sethverrill/turing_work/mod2/2408/hang_in/hang_in_there_api/app/serializers/poster_serializer.rb": {
         "lines": [
           1,
           1,
@@ -281,6 +287,7 @@
           4,
           null,
           12,
+
           null,
           null,
           null,
@@ -300,7 +307,7 @@
           null,
           1,
           null,
-          2,
+          4,
           null,
           null,
           null,
@@ -318,6 +325,11 @@
         ]
       }
     },
+<<<<<<< HEAD
     "timestamp": 1729817901
+=======
+    "timestamp": 1729813735
+
+>>>>>>> 825a07bf788b3d1749d0dcd4cc6008b710696c70
   }
 }

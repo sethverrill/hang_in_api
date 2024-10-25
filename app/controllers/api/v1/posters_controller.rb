@@ -10,13 +10,18 @@ class Api::V1::PostersController < ApplicationController
             posters = Poster.all
         end
         #*5. Determine, am I exposing (serializer) something? Or am I displaying (views) something?
+
         render json: PosterSerializer.format_posters(posters)
-        #*render json: Poster.all
+        #render json: Poster.all
     end
 
     def show
         poster = Poster.find(params[:id])
         render json: PosterSerializer.format_single_poster(poster)
+    end
+
+    def update
+        render json: Poster.update(params[:id], poster_params)
     end
 
     def create
@@ -29,9 +34,9 @@ class Api::V1::PostersController < ApplicationController
         Poster.find(params[:id]).destroy
     end
 
-    private
 
+    private
     def poster_params
-        params.require(:poster).permit(:name, :description, :price, :year, :vintage, :img_url)    
-    end    
+        params.require(:poster).permit(:name, :description, :price, :year, :vintage, :img_url)
+    end
 end
