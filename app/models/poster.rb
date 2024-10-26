@@ -1,7 +1,5 @@
-class Poster < ApplicationRecord
-    # !validations/relationships/data_manipulation happen here
-    validates :name, presence: true, uniqueness: true
-    # validates :description, :price, :year, :vintage, :img_url, presence: true
+class Poster < ApplicationRecord    
+    validates :name, presence: true, uniqueness: true    
     
     def self.sort_by_creation(choice)
         order(created_at: choice.to_sym)
