@@ -1,4 +1,8 @@
 class Poster < ApplicationRecord
+    # !validations/relationships/data_manipulation happen here
+    validates :name, presence: true, uniqueness: true
+    # validates :description, :price, :year, :vintage, :img_url, presence: true
+    
     def self.sort_by_creation(choice)
         order(created_at: choice.to_sym)
     end
