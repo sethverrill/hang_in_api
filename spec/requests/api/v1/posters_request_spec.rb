@@ -46,7 +46,6 @@ RSpec.describe "Fetch all posters" do
       expect(response).to be_successful 
       expect(response.status).to eq(200)
       posters = JSON.parse(response.body,symbolize_names:true)[:data]
-      #*now we have to check if our data attributes are correct
       expect(posters).to be_an(Array)
 
       poster = posters[0]
@@ -173,7 +172,6 @@ RSpec.describe "Fetch all posters" do
     poster = posters[0]
     expect(poster[:id]).to be_an(Integer)
     expect(poster[:type]).to eq('poster')
-   # *Here we can see the first poster in our array should be poster 1, which would be the "oldest" poster created
     expect(poster[:id]).to eq(@poster1.id)
   end
     
@@ -189,7 +187,6 @@ RSpec.describe "Fetch all posters" do
     poster = posters[0]
     expect(poster[:id]).to be_an(Integer)
     expect(poster[:type]).to eq('poster')
-    # *Here we can see the first poster in our array should be poster 3, which would be the most recent poster created
     expect(poster[:id]).to eq(@poster5.id) 
   end
 
