@@ -36,8 +36,17 @@ class Api::V1::PostersController < ApplicationController
     def create
         poster = Poster.create!(poster_params)
         render json: PosterSerializer.format_single_poster(poster)
-    end
 
+    rescue ActiveRecord::RecordInvalid => exception
+        render json: {
+          errors: [
+            {
+              status: "422",
+              message: "Cannot duplicate poster/all attributes must be filled out"
+            }
+          ]
+        }, status: :unprocessable_entity
+    end
 
     def destroy
         Poster.find(params[:id]).destroy
