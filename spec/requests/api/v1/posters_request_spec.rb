@@ -249,4 +249,4 @@ RSpec.describe "Fetch all posters" do
       expect(data[:errors].first)
     end
   end
-end     
+end
