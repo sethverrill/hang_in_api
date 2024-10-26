@@ -1,4 +1,6 @@
-class Poster < ApplicationRecord
+class Poster < ApplicationRecord    
+    validates :name, presence: true, uniqueness: true    
+    
     def self.sort_by_creation(choice)
         order(created_at: choice.to_sym)
     end
