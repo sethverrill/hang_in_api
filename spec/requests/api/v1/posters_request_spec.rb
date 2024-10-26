@@ -42,7 +42,7 @@ RSpec.describe "Fetch all posters" do
     end
 
   it 'can fetch all posters' do
-      get '/api/v1/posters' #First we get our route, what are we expecting next?
+      get '/api/v1/posters' 
       expect(response).to be_successful 
       expect(response.status).to eq(200)
       posters = JSON.parse(response.body,symbolize_names:true)[:data]
@@ -128,12 +128,11 @@ RSpec.describe "Fetch all posters" do
         "img_url":  "https://unsplash.com/photos/brown-brick-building-with-red-car-parked-on-the-side-mMV6Y0ExyIk"
     }
 
-    post '/api/v1/posters', params: { poster: poster_info} #First we get our route, what are we expecting next?
+    post '/api/v1/posters', params: { poster: poster_info}
     expect(response).to be_successful 
     expect(response.status).to eq(200)
       
-    poster = JSON.parse(response.body,symbolize_names:true)[:data]
-    #now we have to check if our data attributes are correct        
+    poster = JSON.parse(response.body,symbolize_names:true)[:data]           
 
     expect(poster[:id]).to be_an(Integer)
     expect(poster[:type]).to eq('poster')
